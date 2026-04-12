@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aman's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <div class="menubar">
+        <div class="left">
+            <span class="logo"><img src="icons/apple-logo.png" alt="logo" width="14px"></span>
+            <span style="font-weight: 700;">Aman's Portfolio</span>
+            <span class="Project">Project</span>
+            <span class="Contact">Contact</span>
+            <span class="Resume">Resume</span>
+        </div>
+
+        <div class="right">
+            <span class="wether">
+                <img src="icons/weather.png" alt="weather" width="15px">
+            </span>
+            <span class="battery">
+                <img src="icons/battery.png" alt="battery" width="15px">
+            </span>
+            <span class="wifi">
+                <img src="icons/wifi.png" alt="wifi" width="15px">
+            </span>
+            <span class="menu">
+                <img src="icons/menu.png" alt="menu" width="15px">
+            </span>
+            <span id="datetime"></span>
+        </div>
+    </div>
+    </header>
+
+
+    <div class="calculator" id="calculator">
+
+        <div class="titlebar" id="titlebar">
+            <span class="btn red" onclick="closeApp()"></span>
+            <span class="btn yellow" onclick="minimizeApp()"></span>
+            <span class="btn green" onclick="maximizeApp()"></span>
+        </div>
+
+        <input type="text" placeholder="0" id="inputBox">
+        <div>
+            <button class="operator">AC</button>
+            <button class="operator">DEL</button>
+            <button class="operator">%</button>
+            <button class="operator">/</button>
+        </div>
+        <div>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button class="operator">*</button>
+        </div>
+        <div>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button class="operator">-</button>
+        </div>
+        <div>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button class="operator">+</button>
+        </div>
+        <div>
+            <button>00</button>
+            <button>0</button>
+            <button>.</button>
+            <button class="equalBtn">=</button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <footer>
+    <div class="dock">
+        <img src="icons/finder.png" class="dock-icon">
+        <img src="icons/safari.png" class="dock-icon">
+        <img src="icons/vscode.png" class="dock-icon">
+        <img src="icons/spotify.png" class="dock-icon">
+        <img src="icons/photo booth.png" class="dock-icon">
+        <img src="icons/calculator.png" class="dock-icon" onclick="openCalculator()">
+        <img src="icons/setting.png" class="dock-icon">
+        <img src="icons/bin.png" class="dock-icon">
+    </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
