@@ -1,3 +1,4 @@
+// Date and Time
 function updateDateTime() {
     const now = new Date();
 
@@ -29,32 +30,7 @@ const icons = document.querySelectorAll('.dock-icon');
 
 
 
-
-// icons.forEach((icon, index) => {
-//     icon.addEventListener('mousemove', () => {
-//         icons.forEach((i, iIndex) => {
-//             let distance = Math.abs(index - iIndex);
-
-//             if (distance === 0) {
-//                 i.style.transform = "scale(1.5) translateY(-10px)";
-//             } else if (distance === 1) {
-//                 i.style.transform = "scale(1.2) translateY(-5px)";
-//             } else {
-//                 i.style.transform = "scale(1)";
-//             }
-//         });
-//     });
-
-//     icon.addEventListener('mouseleave', () => {
-//         icons.forEach(i => {
-//             i.style.transform = "scale(1)";
-//         });
-//     });
-// });
-
-
-
-
+// Calculator
 let input = document.getElementById('inputBox');
 let button = document.querySelectorAll('button');
 
@@ -119,4 +95,56 @@ function closeApp() {
 
 function minimizeApp() {
     document.getElementById("calculator").style.display = "none";
+}
+
+
+// Photo Booth
+const video = document.getElementById("video");
+const canvas = document.getElementById("canvas");
+const photo = document.getElementById("photo");
+
+// Open Camera
+function openPhoto(){
+    const pb = document.getElementById("photobooth");
+    pb.style.display = "block";
+
+    navigator.mediaDevices.getUserMedia({ video: true })
+        .then(stream =>{
+            video.srcObject = stream;
+        })
+        .catch(err =>{
+            alert("Camera access denied!");
+        });
+}
+
+// Close
+function closePhoto(){
+    document.getElementById("photobooth").style.display = "none";
+
+    let stream = video.srcObject;
+    if (stream) {
+        stream.getTracks().forEach(track => track.stop());
+    }
+}
+
+// Minimize
+function minimizePhoto(){
+    closePhoto();
+}
+
+
+const gallery = document.getElementById("gallery");
+
+function takePhoto() {
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+
+    const ctx = canvas.getContext("2d");
+    ctx.drawImage(video, 0, 0);
+
+    const img = document.createElement("img");
+    img.src = canvas.toDataURL("image/png");
+
+    gallery.appendChild(img);
+
 }

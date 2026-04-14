@@ -35,13 +35,13 @@
     </div>
     </header>
 
-
     <div class="calculator" id="calculator">
 
         <div class="titlebar" id="titlebar">
             <span class="btn red" onclick="closeApp()"></span>
             <span class="btn yellow" onclick="minimizeApp()"></span>
             <span class="btn green" onclick="maximizeApp()"></span>
+            <span class="name">Calculator</span>
         </div>
 
         <input type="text" placeholder="0" id="inputBox">
@@ -77,11 +77,24 @@
         </div>
     </div>
 
+    <div class="photobooth" id="photobooth">
+        <div class="title" id="title">
+            <span class="btn red" onclick="closePhoto()"></span>
+            <span class="btn yellow" onclick="minimizePhoto()"></span>
+            <span class="btn green" onclick="maximizePhoto()"></span>
+            <span class="name">Photo Booth</span>
+        </div>
 
+        <video id="video" autoplay playsinline></video>
+        <canvas id="canvas"></canvas>
+        <div id="gallery" ></div>
 
+        <div class="bottom">
+            <button class="capture" onclick="takePhoto()"><img src="icons/capture.png" alt="capture" width="30px"></button>
+            <button1 class="effects">Effects</button1>
+        </div>
 
-
-
+    </div>
 
 
     <footer>
@@ -90,21 +103,12 @@
         <img src="icons/safari.png" class="dock-icon">
         <img src="icons/vscode.png" class="dock-icon">
         <img src="icons/spotify.png" class="dock-icon">
-        <img src="icons/photo booth.png" class="dock-icon">
+        <img src="icons/photo booth.png" class="dock-icon" onclick="openPhoto()">
         <img src="icons/calculator.png" class="dock-icon" onclick="openCalculator()">
         <img src="icons/setting.png" class="dock-icon">
         <img src="icons/bin.png" class="dock-icon">
     </div>
     </footer>
-
-
-
-
-
-
-
-
-
 
 
     <script src="script.js"></script>

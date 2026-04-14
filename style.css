@@ -88,6 +88,13 @@ body {
 .red {background: #ff5f57;}
 .yellow {background: #ffbd2e;}
 .green {background: #28c840;}
+.name{
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.500);
+}
+
 
 input{
     width: 200px;
@@ -121,10 +128,101 @@ button{
 
 }
 
-.equalBtn{
+.equalBtn, .operator{
     background-color: orange;
 }
 
-.operator{
-    background-color: orange;
+
+.photobooth{
+    position: absolute;
+    top: 80px;
+    left: 320px;
+    width: 800px;
+    height: 600px;
+
+    background: rgba(0, 0, 0, 0.900);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(49, 49, 49, 0.5);
+    display: none;
 }
+.title{
+    height: 5px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 15px;
+    cursor: default;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+#video{
+    width: 100%;
+    height: 82.3%;
+    object-fit: cover;
+    transform: scalex(-1);
+
+}
+#gallery{
+    position: absolute;
+    bottom: 70px;
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto;
+    background: transparent;
+    backdrop-filter: blur(50px);
+    
+
+}
+#gallery img{
+    width: 100px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 2px;
+    border: 1px solid rgba(255, 255, 255, 0.500);
+    transform: scalex(-1);
+}
+
+#canvas{
+    display: none;
+}
+.bottom{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+}
+.capture{
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    position: absolute;
+    background: rgb(255, 54, 54);
+    cursor: default;
+}
+.effects{
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 5px;
+    padding: 3px 20px ;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.715);
+    position: absolute;
+    right: 20px;
+}
+.button1{
+    width: auto;
+    height: 30px;
+}
+
+
